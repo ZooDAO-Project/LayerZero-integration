@@ -1,0 +1,22 @@
+{
+	"bsc-testnet": {
+		"startMintId": 1,
+		"endMintId": 10
+	},
+	"fuji": {
+		"startMintId": 11,
+		"endMintId": 20
+	},
+	"goerli": {
+		"startMintId": 0,
+		"endMintId": 99
+	},
+	"mumbai": {
+		"startMintId": 0,
+		"endMintId": 99
+	},
+	"moonbase": {
+		"startMintId": 100,
+		"endMintId": 199
+	}
+}
