@@ -8,12 +8,16 @@
 		"endMintId": 20
 	},
 	"goerli": {
-		"startMintId": 0,
-		"endMintId": 99
+		"startMintId": 11,
+		"endMintId": 20
 	},
 	"mumbai": {
 		"startMintId": 0,
 		"endMintId": 99
+	},
+	"moonbeam": {
+		"startMintId": 51,
+		"endMintId": 100
 	},
 	"moonbase": {
 		"startMintId": 100,
