@@ -1,0 +1,602 @@
+[
+	{
+		"id": 11,
+		"type": "earth",
+		"rarity": "common",
+		"name": "sheep"
+	},
+	{
+		"id": 100,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "werewolf"
+	},
+	{
+		"id": 10,
+		"type": "earth",
+		"rarity": "common",
+		"name": "rat"
+	},
+	{
+		"id": 12,
+		"type": "earth",
+		"rarity": "common",
+		"name": "varan"
+	},
+	{
+		"id": 13,
+		"type": "earth",
+		"rarity": "common",
+		"name": "hedgehog"
+	},
+	{
+		"id": 14,
+		"type": "earth",
+		"rarity": "common",
+		"name": "spider"
+	},
+	{
+		"id": 15,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "bear"
+	},
+	{
+		"id": 16,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "camel"
+	},
+	{
+		"id": 17,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "elephant"
+	},
+	{
+		"id": 18,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "fox"
+	},
+	{
+		"id": 19,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "hyena"
+	},
+	{
+		"id": 1,
+		"type": "earth",
+		"rarity": "common",
+		"name": "cow"
+	},
+	{
+		"id": 20,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "kenguru"
+	},
+	{
+		"id": 21,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "snake"
+	},
+	{
+		"id": 22,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "squirrel"
+	},
+	{
+		"id": 23,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "wolf"
+	},
+	{
+		"id": 24,
+		"type": "earth",
+		"rarity": "epic",
+		"name": "chameleon"
+	},
+	{
+		"id": 25,
+		"type": "earth",
+		"rarity": "epic",
+		"name": "panda"
+	},
+	{
+		"id": 26,
+		"type": "earth",
+		"rarity": "epic",
+		"name": "tiger"
+	},
+	{
+		"id": 27,
+		"type": "water",
+		"rarity": "common",
+		"name": "crab"
+	},
+	{
+		"id": 29,
+		"type": "water",
+		"rarity": "common",
+		"name": "dolphin"
+	},
+	{
+		"id": 2,
+		"type": "earth",
+		"rarity": "common",
+		"name": "moose"
+	},
+	{
+		"id": 30,
+		"type": "water",
+		"rarity": "common",
+		"name": "octopus"
+	},
+	{
+		"id": 31,
+		"type": "water",
+		"rarity": "common",
+		"name": "piranha"
+	},
+	{
+		"id": 32,
+		"type": "water",
+		"rarity": "common",
+		"name": "riff"
+	},
+	{
+		"id": 33,
+		"type": "water",
+		"rarity": "common",
+		"name": "seal"
+	},
+	{
+		"id": 35,
+		"type": "water",
+		"rarity": "common",
+		"name": "shrimp"
+	},
+	{
+		"id": 34,
+		"type": "water",
+		"rarity": "common",
+		"name": "shellfish"
+	},
+	{
+		"id": 36,
+		"type": "water",
+		"rarity": "common",
+		"name": "squid"
+	},
+	{
+		"id": 37,
+		"type": "water",
+		"rarity": "common",
+		"name": "starfish"
+	},
+	{
+		"id": 38,
+		"type": "water",
+		"rarity": "common",
+		"name": "swordfish"
+	},
+	{
+		"id": 39,
+		"type": "water",
+		"rarity": "common",
+		"name": "turtle"
+	},
+	{
+		"id": 3,
+		"type": "earth",
+		"rarity": "common",
+		"name": "rabbit"
+	},
+	{
+		"id": 40,
+		"type": "water",
+		"rarity": "common",
+		"name": "carp"
+	},
+	{
+		"id": 41,
+		"type": "water",
+		"rarity": "common",
+		"name": "stingray"
+	},
+	{
+		"id": 42,
+		"type": "water",
+		"rarity": "rare",
+		"name": "blobfish"
+	},
+	{
+		"id": 43,
+		"type": "water",
+		"rarity": "rare",
+		"name": "catfish"
+	},
+	{
+		"id": 44,
+		"type": "water",
+		"rarity": "rare",
+		"name": "hammerhead"
+	},
+	{
+		"id": 46,
+		"type": "water",
+		"rarity": "rare",
+		"name": "plankton"
+	},
+	{
+		"id": 47,
+		"type": "water",
+		"rarity": "rare",
+		"name": "shark"
+	},
+	{
+		"id": 45,
+		"type": "water",
+		"rarity": "rare",
+		"name": "seahorse"
+	},
+	{
+		"id": 4,
+		"type": "earth",
+		"rarity": "common",
+		"name": "cat"
+	},
+	{
+		"id": 52,
+		"type": "air",
+		"rarity": "common",
+		"name": "falcon"
+	},
+	{
+		"id": 54,
+		"type": "air",
+		"rarity": "common",
+		"name": "owl"
+	},
+	{
+		"id": 53,
+		"type": "air",
+		"rarity": "common",
+		"name": "goose"
+	},
+	{
+		"id": 55,
+		"type": "air",
+		"rarity": "common",
+		"name": "pelican"
+	},
+	{
+		"id": 56,
+		"type": "air",
+		"rarity": "common",
+		"name": "pigeon"
+	},
+	{
+		"id": 58,
+		"type": "air",
+		"rarity": "common",
+		"name": "sparrow"
+	},
+	{
+		"id": 59,
+		"type": "air",
+		"rarity": "common",
+		"name": "stork"
+	},
+	{
+		"id": 5,
+		"type": "earth",
+		"rarity": "common",
+		"name": "guinea"
+	},
+	{
+		"id": 57,
+		"type": "air",
+		"rarity": "common",
+		"name": "paradise"
+	},
+	{
+		"id": 60,
+		"type": "air",
+		"rarity": "common",
+		"name": "turkey"
+	},
+	{
+		"id": 61,
+		"type": "air",
+		"rarity": "common",
+		"name": "woodpecker"
+	},
+	{
+		"id": 63,
+		"type": "air",
+		"rarity": "rare",
+		"name": "hormbill"
+	},
+	{
+		"id": 62,
+		"type": "air",
+		"rarity": "rare",
+		"name": "arasari"
+	},
+	{
+		"id": 64,
+		"type": "air",
+		"rarity": "rare",
+		"name": "golden"
+	},
+	{
+		"id": 65,
+		"type": "air",
+		"rarity": "rare",
+		"name": "parrot"
+	},
+	{
+		"id": 66,
+		"type": "air",
+		"rarity": "rare",
+		"name": "shadoof"
+	},
+	{
+		"id": 67,
+		"type": "air",
+		"rarity": "rare",
+		"name": "toucan"
+	},
+	{
+		"id": 6,
+		"type": "earth",
+		"rarity": "common",
+		"name": "deer"
+	},
+	{
+		"id": 69,
+		"type": "air",
+		"rarity": "epic",
+		"name": "windowbird"
+	},
+	{
+		"id": 68,
+		"type": "air",
+		"rarity": "epic",
+		"name": "malurus"
+	},
+	{
+		"id": 70,
+		"type": "air",
+		"rarity": "epic",
+		"name": "flamingo"
+	},
+	{
+		"id": 72,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "slime"
+	},
+	{
+		"id": 71,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "golem"
+	},
+	{
+		"id": 73,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "beholder"
+	},
+	{
+		"id": 75,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "cerberus"
+	},
+	{
+		"id": 74,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "bukavac"
+	},
+	{
+		"id": 76,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "lung"
+	},
+	{
+		"id": 77,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "chort"
+	},
+	{
+		"id": 7,
+		"type": "earth",
+		"rarity": "common",
+		"name": "goat"
+	},
+	{
+		"id": 78,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "cthulhu"
+	},
+	{
+		"id": 79,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "cyclopes"
+	},
+	{
+		"id": 81,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "doge"
+	},
+	{
+		"id": 80,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "devil"
+	},
+	{
+		"id": 82,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "dragon"
+	},
+	{
+		"id": 83,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "gargoyle"
+	},
+	{
+		"id": 84,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "griffin"
+	},
+	{
+		"id": 85,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "hydra"
+	},
+	{
+		"id": 86,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "minotaur"
+	},
+	{
+		"id": 87,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "centaur"
+	},
+	{
+		"id": 88,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "ork"
+	},
+	{
+		"id": 8,
+		"type": "earth",
+		"rarity": "common",
+		"name": "pug"
+	},
+	{
+		"id": 89,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "pegasus"
+	},
+	{
+		"id": 90,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "phoenix"
+	},
+	{
+		"id": 91,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "satyr"
+	},
+	{
+		"id": 93,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "tarasque"
+	},
+	{
+		"id": 92,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "skeletaur"
+	},
+	{
+		"id": 94,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "troglodyte"
+	},
+	{
+		"id": 95,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "unicorn"
+	},
+	{
+		"id": 96,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "vampire"
+	},
+	{
+		"id": 97,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "wyvern"
+	},
+	{
+		"id": 28,
+		"type": "water",
+		"rarity": "common",
+		"name": "jellyfish"
+	},
+	{
+		"id": 9,
+		"type": "earth",
+		"rarity": "common",
+		"name": "pig"
+	},
+	{
+		"id": 99,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "angel"
+	},
+	{
+		"id": 49,
+		"type": "water",
+		"rarity": "epic",
+		"name": "decapod"
+	},
+	{
+		"id": 48,
+		"type": "water",
+		"rarity": "epic",
+		"name": "mollusk"
+	},
+	{
+		"id": 51,
+		"type": "water",
+		"rarity": "epic",
+		"name": "warlus"
+	},
+	{
+		"id": 50,
+		"type": "water",
+		"rarity": "epic",
+		"name": "sea"
+	},
+	{
+		"id": 98,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "behelit"
+	}
+]
