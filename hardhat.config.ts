@@ -13,6 +13,7 @@ import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import '@openzeppelin/hardhat-upgrades'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
+import './tasks/index.js'
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -87,7 +88,7 @@ const config: HardhatUserConfig = {
 	// solidity: "0.8.4",
 	contractSizer: {
 		alphaSort: false,
-		runOnCompile: true,
+		runOnCompile: false,
 		disambiguatePaths: false,
 	},
 
@@ -114,7 +115,19 @@ const config: HardhatUserConfig = {
 			polygonMumbai: process.env.POLYGONSCAN_TOKEN as string,
 			bsc: process.env.BSCSCAN_TOKEN as string,
 			bscTestnet: process.env.BSCSCAN_TOKEN as string,
+			arbitrumOne: process.env.ARBISCAN_TOKEN as string,
+			fantom: process.env.FTMSCAN_TOKEN as string,
 		},
+		customChains: [
+			{
+				network: 'fantom',
+				chainId: 250,
+				urls: {
+					apiURL: 'https://api.ftmscan.com/api',
+					browserURL: 'https://ftmscan.com/',
+				},
+			},
+		],
 	},
 
 	networks: {

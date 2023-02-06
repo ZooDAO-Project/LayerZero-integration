@@ -1,1 +1,1 @@
-module.exports = [3000000, '0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23', 11, 20]
+module.exports = [300000, '0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7']
