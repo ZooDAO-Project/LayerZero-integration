@@ -1,21 +1,15 @@
 [
 	{
-		"id": 11,
-		"type": "earth",
-		"rarity": "common",
-		"name": "sheep"
-	},
-	{
-		"id": 100,
-		"type": "fire",
-		"rarity": "legendary",
-		"name": "werewolf"
-	},
-	{
 		"id": 10,
 		"type": "earth",
 		"rarity": "common",
 		"name": "rat"
+	},
+	{
+		"id": 11,
+		"type": "earth",
+		"rarity": "common",
+		"name": "sheep"
 	},
 	{
 		"id": 12,
@@ -30,6 +24,12 @@
 		"name": "hedgehog"
 	},
 	{
+		"id": 100,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "werewolf"
+	},
+	{
 		"id": 14,
 		"type": "earth",
 		"rarity": "common",
@@ -42,10 +42,10 @@
 		"name": "bear"
 	},
 	{
-		"id": 16,
+		"id": 18,
 		"type": "earth",
 		"rarity": "rare",
-		"name": "camel"
+		"name": "fox"
 	},
 	{
 		"id": 17,
@@ -54,10 +54,10 @@
 		"name": "elephant"
 	},
 	{
-		"id": 18,
+		"id": 16,
 		"type": "earth",
 		"rarity": "rare",
-		"name": "fox"
+		"name": "camel"
 	},
 	{
 		"id": 19,
@@ -78,16 +78,16 @@
 		"name": "kenguru"
 	},
 	{
-		"id": 21,
-		"type": "earth",
-		"rarity": "rare",
-		"name": "snake"
-	},
-	{
 		"id": 22,
 		"type": "earth",
 		"rarity": "rare",
 		"name": "squirrel"
+	},
+	{
+		"id": 21,
+		"type": "earth",
+		"rarity": "rare",
+		"name": "snake"
 	},
 	{
 		"id": 23,
@@ -114,6 +114,12 @@
 		"name": "tiger"
 	},
 	{
+		"id": 2,
+		"type": "earth",
+		"rarity": "common",
+		"name": "moose"
+	},
+	{
 		"id": 27,
 		"type": "water",
 		"rarity": "common",
@@ -124,12 +130,6 @@
 		"type": "water",
 		"rarity": "common",
 		"name": "dolphin"
-	},
-	{
-		"id": 2,
-		"type": "earth",
-		"rarity": "common",
-		"name": "moose"
 	},
 	{
 		"id": 30,
@@ -147,13 +147,7 @@
 		"id": 32,
 		"type": "water",
 		"rarity": "common",
-		"name": "riff"
-	},
-	{
-		"id": 33,
-		"type": "water",
-		"rarity": "common",
-		"name": "seal"
+		"name": "riff fish"
 	},
 	{
 		"id": 35,
@@ -162,16 +156,22 @@
 		"name": "shrimp"
 	},
 	{
-		"id": 34,
-		"type": "water",
-		"rarity": "common",
-		"name": "shellfish"
-	},
-	{
 		"id": 36,
 		"type": "water",
 		"rarity": "common",
 		"name": "squid"
+	},
+	{
+		"id": 33,
+		"type": "water",
+		"rarity": "common",
+		"name": "seal"
+	},
+	{
+		"id": 34,
+		"type": "water",
+		"rarity": "common",
+		"name": "shellfish"
 	},
 	{
 		"id": 37,
@@ -180,22 +180,10 @@
 		"name": "starfish"
 	},
 	{
-		"id": 38,
-		"type": "water",
-		"rarity": "common",
-		"name": "swordfish"
-	},
-	{
 		"id": 39,
 		"type": "water",
 		"rarity": "common",
 		"name": "turtle"
-	},
-	{
-		"id": 3,
-		"type": "earth",
-		"rarity": "common",
-		"name": "rabbit"
 	},
 	{
 		"id": 40,
@@ -204,16 +192,22 @@
 		"name": "carp"
 	},
 	{
+		"id": 38,
+		"type": "water",
+		"rarity": "common",
+		"name": "swordfish"
+	},
+	{
 		"id": 41,
 		"type": "water",
 		"rarity": "common",
 		"name": "stingray"
 	},
 	{
-		"id": 42,
-		"type": "water",
-		"rarity": "rare",
-		"name": "blobfish"
+		"id": 3,
+		"type": "earth",
+		"rarity": "common",
+		"name": "rabbit"
 	},
 	{
 		"id": 43,
@@ -225,7 +219,19 @@
 		"id": 44,
 		"type": "water",
 		"rarity": "rare",
-		"name": "hammerhead"
+		"name": "hammerhead shark"
+	},
+	{
+		"id": 45,
+		"type": "water",
+		"rarity": "rare",
+		"name": "seahorse"
+	},
+	{
+		"id": 42,
+		"type": "water",
+		"rarity": "rare",
+		"name": "blobfish"
 	},
 	{
 		"id": 46,
@@ -238,18 +244,6 @@
 		"type": "water",
 		"rarity": "rare",
 		"name": "shark"
-	},
-	{
-		"id": 45,
-		"type": "water",
-		"rarity": "rare",
-		"name": "seahorse"
-	},
-	{
-		"id": 4,
-		"type": "earth",
-		"rarity": "common",
-		"name": "cat"
 	},
 	{
 		"id": 52,
@@ -282,28 +276,16 @@
 		"name": "pigeon"
 	},
 	{
+		"id": 57,
+		"type": "air",
+		"rarity": "common",
+		"name": "paradise bird"
+	},
+	{
 		"id": 58,
 		"type": "air",
 		"rarity": "common",
 		"name": "sparrow"
-	},
-	{
-		"id": 59,
-		"type": "air",
-		"rarity": "common",
-		"name": "stork"
-	},
-	{
-		"id": 5,
-		"type": "earth",
-		"rarity": "common",
-		"name": "guinea"
-	},
-	{
-		"id": 57,
-		"type": "air",
-		"rarity": "common",
-		"name": "paradise"
 	},
 	{
 		"id": 60,
@@ -318,10 +300,16 @@
 		"name": "woodpecker"
 	},
 	{
-		"id": 63,
+		"id": 5,
+		"type": "earth",
+		"rarity": "common",
+		"name": "guinea pig"
+	},
+	{
+		"id": 59,
 		"type": "air",
-		"rarity": "rare",
-		"name": "hormbill"
+		"rarity": "common",
+		"name": "stork"
 	},
 	{
 		"id": 62,
@@ -330,10 +318,16 @@
 		"name": "arasari"
 	},
 	{
-		"id": 64,
+		"id": 4,
+		"type": "earth",
+		"rarity": "common",
+		"name": "cat"
+	},
+	{
+		"id": 63,
 		"type": "air",
 		"rarity": "rare",
-		"name": "golden"
+		"name": "hormbill"
 	},
 	{
 		"id": 65,
@@ -348,16 +342,16 @@
 		"name": "shadoof"
 	},
 	{
+		"id": 64,
+		"type": "air",
+		"rarity": "rare",
+		"name": "golden pheasant"
+	},
+	{
 		"id": 67,
 		"type": "air",
 		"rarity": "rare",
 		"name": "toucan"
-	},
-	{
-		"id": 6,
-		"type": "earth",
-		"rarity": "common",
-		"name": "deer"
 	},
 	{
 		"id": 69,
@@ -372,16 +366,16 @@
 		"name": "malurus"
 	},
 	{
+		"id": 6,
+		"type": "earth",
+		"rarity": "common",
+		"name": "deer"
+	},
+	{
 		"id": 70,
 		"type": "air",
 		"rarity": "epic",
 		"name": "flamingo"
-	},
-	{
-		"id": 72,
-		"type": "fire",
-		"rarity": "legendary",
-		"name": "slime"
 	},
 	{
 		"id": 71,
@@ -396,10 +390,10 @@
 		"name": "beholder"
 	},
 	{
-		"id": 75,
+		"id": 72,
 		"type": "fire",
 		"rarity": "legendary",
-		"name": "cerberus"
+		"name": "slime"
 	},
 	{
 		"id": 74,
@@ -408,16 +402,16 @@
 		"name": "bukavac"
 	},
 	{
+		"id": 75,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "cerberus"
+	},
+	{
 		"id": 76,
 		"type": "fire",
 		"rarity": "legendary",
 		"name": "lung"
-	},
-	{
-		"id": 77,
-		"type": "fire",
-		"rarity": "legendary",
-		"name": "chort"
 	},
 	{
 		"id": 7,
@@ -426,16 +420,28 @@
 		"name": "goat"
 	},
 	{
-		"id": 78,
+		"id": 77,
 		"type": "fire",
 		"rarity": "legendary",
-		"name": "cthulhu"
+		"name": "chort"
 	},
 	{
 		"id": 79,
 		"type": "fire",
 		"rarity": "legendary",
 		"name": "cyclopes"
+	},
+	{
+		"id": 78,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "cthulhu"
+	},
+	{
+		"id": 82,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "dragon"
 	},
 	{
 		"id": 81,
@@ -450,12 +456,6 @@
 		"name": "devil"
 	},
 	{
-		"id": 82,
-		"type": "fire",
-		"rarity": "legendary",
-		"name": "dragon"
-	},
-	{
 		"id": 83,
 		"type": "fire",
 		"rarity": "legendary",
@@ -468,10 +468,10 @@
 		"name": "griffin"
 	},
 	{
-		"id": 85,
+		"id": 87,
 		"type": "fire",
 		"rarity": "legendary",
-		"name": "hydra"
+		"name": "centaur"
 	},
 	{
 		"id": 86,
@@ -480,10 +480,10 @@
 		"name": "minotaur"
 	},
 	{
-		"id": 87,
+		"id": 85,
 		"type": "fire",
 		"rarity": "legendary",
-		"name": "centaur"
+		"name": "hydra"
 	},
 	{
 		"id": 88,
@@ -492,28 +492,28 @@
 		"name": "ork"
 	},
 	{
-		"id": 8,
-		"type": "earth",
-		"rarity": "common",
-		"name": "pug"
-	},
-	{
-		"id": 89,
-		"type": "fire",
-		"rarity": "legendary",
-		"name": "pegasus"
-	},
-	{
 		"id": 90,
 		"type": "fire",
 		"rarity": "legendary",
 		"name": "phoenix"
 	},
 	{
+		"id": 8,
+		"type": "earth",
+		"rarity": "common",
+		"name": "pug"
+	},
+	{
 		"id": 91,
 		"type": "fire",
 		"rarity": "legendary",
 		"name": "satyr"
+	},
+	{
+		"id": 89,
+		"type": "fire",
+		"rarity": "legendary",
+		"name": "pegasus"
 	},
 	{
 		"id": 93,
@@ -552,12 +552,6 @@
 		"name": "wyvern"
 	},
 	{
-		"id": 28,
-		"type": "water",
-		"rarity": "common",
-		"name": "jellyfish"
-	},
-	{
 		"id": 9,
 		"type": "earth",
 		"rarity": "common",
@@ -570,10 +564,10 @@
 		"name": "angel"
 	},
 	{
-		"id": 49,
+		"id": 28,
 		"type": "water",
-		"rarity": "epic",
-		"name": "decapod"
+		"rarity": "common",
+		"name": "jellyfish"
 	},
 	{
 		"id": 48,
@@ -582,16 +576,22 @@
 		"name": "mollusk"
 	},
 	{
+		"id": 50,
+		"type": "water",
+		"rarity": "epic",
+		"name": "sea urchin"
+	},
+	{
 		"id": 51,
 		"type": "water",
 		"rarity": "epic",
 		"name": "warlus"
 	},
 	{
-		"id": 50,
+		"id": 49,
 		"type": "water",
 		"rarity": "epic",
-		"name": "sea"
+		"name": "decapod"
 	},
 	{
 		"id": 98,
