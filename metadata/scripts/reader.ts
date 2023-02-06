@@ -34,20 +34,34 @@ function readFiles(dirname: string, onFileContent: Function, onError: Function) 
 	return data
 }
 
-const onErr = (err) => log('Error in reading:', err)
+const onErr = (err: any) => log('Error in reading:', err)
 const onFileContent = (filename: string, content: any) => {
 	const dataArr = filename.split('_')
-	const [id, , type, rarity, name] = dataArr
+
+	const [id, , type, rarity] = dataArr
+
+	let name: string
+
+	if (dataArr.length > 5) {
+		name = dataArr[4] + ' ' + dataArr[5].split('.')[0]
+	} else {
+		name = dataArr[4].split('.')[0]
+	}
 
 	const card: Card = {
 		id: Number(id),
 		type,
 		rarity,
-		name: name.split('.')[0],
+		name,
 	}
 
 	log(JSON.stringify(card))
 }
 
 const cards = readFiles('./metadata/assets/', onFileContent, onErr)
-fs.writeFile('./metadata/attributes.json', JSON.stringify(cards), { flag: 'w+' }, onErr)
+fs.writeFile('./metadata/attributes.json', JSON.stringify(cards), (err) => {
+	if (err) {
+		console.error(err)
+	}
+})
+// fs.writeFile('./metadata/attributes.json', JSON.stringify(cards), { flag: 'w+' }, onErr)

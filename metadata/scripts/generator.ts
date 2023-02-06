@@ -15,14 +15,20 @@ interface Attribute {
 	value: string | number
 }
 
-function getAttribute(trait_type: string, value: number | string): Attribute {
-	return { trait_type, value }
+function getAttribute(trait_type: string, value: string): Attribute {
+	return { trait_type, value: value[0].toUpperCase() + value.slice(1) }
 }
 
 for (const item of attributes) {
+	const words = item.name.split(' ')
+
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+	}
+
 	const metadata = {
-		name: item.name,
-		description: 'Description',
+		name: words.join(' '),
+		description: "One of ZooDAO's Limited Edition Genesis Cards",
 		image: 'https://gateway.pinata.cloud/ipfs/QmTcsJujMBvRQL3gR6TeT4CBfUFayQScLYSKdViyCki7vR/' + item.id + '.gif',
 		attributes: [getAttribute('rarity', item.rarity), getAttribute('type', item.type)],
 	}
