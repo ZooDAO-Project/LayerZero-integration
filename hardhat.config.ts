@@ -14,6 +14,9 @@ import 'hardhat-deploy-ethers'
 import '@openzeppelin/hardhat-upgrades'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import './tasks/index.js'
+import { setTrustedRemote } from './tasks/setTrustedRemote'
+import { oftSend } from './tasks/oftSend'
+import { proxyOftSend } from './tasks/proxyOftSend'
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -24,6 +27,30 @@ task('accounts', 'Prints the list of accounts', async (taskArgs: any, hre: Hardh
 		console.log(account.address)
 	}
 })
+
+task(
+	'setTrustedRemote',
+	'setTrustedRemote(chainId, sourceAddr) to enable inbound/outbound messages with your other contracts',
+	setTrustedRemote
+)
+	.addParam('targetNetwork', 'the target network to set as a trusted remote')
+	.addOptionalParam('localContract', 'Name of local contract if the names are different')
+	.addOptionalParam('remoteContract', 'Name of remote contract if the names are different')
+	.addOptionalParam('contract', 'If both contracts are the same name')
+
+task('oftSend', 'send tokens to another chain', oftSend)
+	.addParam('qty', 'qty of tokens to send')
+	.addParam('targetNetwork', 'the target network to let this instance receive messages from')
+	.addOptionalParam('localContract', 'Name of local contract if the names are different')
+	.addOptionalParam('remoteContract', 'Name of remote contract if the names are different')
+	.addOptionalParam('contract', 'If both contracts are the same name')
+
+task('proxyOftSend', 'send regular tokens using proxy to another chain', proxyOftSend)
+	.addParam('qty', 'qty of tokens to send')
+	.addParam('targetNetwork', 'the target network to let this instance receive messages from')
+	.addOptionalParam('localContract', 'Name of local contract if the names are different')
+	.addOptionalParam('remoteContract', 'Name of remote contract if the names are different')
+	.addOptionalParam('contract', 'If both contracts are the same name')
 
 function getMnemonic(networkName: string) {
 	if (networkName) {

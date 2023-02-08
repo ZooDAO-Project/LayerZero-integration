@@ -18,7 +18,9 @@
 		"classes/**/*",
 		"test/**/*",
 		"typechain/**/*",
-		"types/**/*"
+		"types/**/*",
+		"utils/**/*",
+		"./hardhat.config.ts"
 	],
 	"files": ["./hardhat.config.ts"]
 }

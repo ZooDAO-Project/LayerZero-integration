@@ -1,30 +1,19 @@
-const CHAIN_ID = require('../constants/chainIds.json')
+import { Contract, ethers } from 'ethers'
+import { HardhatRuntimeEnvironment } from 'hardhat/types'
+
+import CHAIN_ID from '../constants/chainIds.json'
+import {
+	OmnichainInteractionTaskArguments,
+	getLocalContractInstanceAndRemoteContractAddress,
+} from '../utils/omnichainInteractions'
 const { getDeploymentAddresses } = require('../utils/readStatic')
 
-module.exports = async function (taskArgs, hre) {
-	let localContract, remoteContract
-
-	if (taskArgs.contract) {
-		localContract = taskArgs.contract
-		remoteContract = taskArgs.contract
-	} else {
-		localContract = taskArgs.localContract
-		remoteContract = taskArgs.remoteContract
-	}
-
-	if (!localContract || !remoteContract) {
-		console.log('Must pass in contract name OR pass in both localContract name and remoteContract name')
-		return
-	}
-
-	// get local contract
-	const localContractInstance = await ethers.getContract(localContract)
-
-	// get deployed remote contract address
-	const remoteAddress = getDeploymentAddresses(taskArgs.targetNetwork)[remoteContract]
+export async function setTrustedRemote(taskArgs: OmnichainInteractionTaskArguments, hre: HardhatRuntimeEnvironment) {
+	const [localContractInstance, remoteAddress] = await getLocalContractInstanceAndRemoteContractAddress(taskArgs, hre)
 
 	// get remote chain id
-	const remoteChainId = CHAIN_ID[taskArgs.targetNetwork]
+	const targetNetwork = taskArgs.targetNetwork as keyof typeof CHAIN_ID
+	const remoteChainId: any = CHAIN_ID[targetNetwork]
 
 	// concat remote and local address
 	let remoteAndLocal = hre.ethers.utils.solidityPack(
@@ -45,7 +34,7 @@ module.exports = async function (taskArgs, hre) {
 			const minDstGas = 400000
 			tx = await (await localContractInstance.setMinDstGas(remoteChainId, PACKET_TYPE, minDstGas)).wait()
 			console.log(`✅ [${hre.network.name}] setMinDstGas(${remoteChainId}, ${remoteAndLocal})`)
-		} catch (e) {
+		} catch (e: any) {
 			if (e.error.message.includes('The chainId + address is already trusted')) {
 				console.log('*source already set*')
 			} else {
