@@ -10,7 +10,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 
 	await deploy('ProxyOFT', {
 		from: deployer,
-		args: [lzEndpointAddress, '0xB4324F89116A08daF65cbCA8646214256680e550'],
+		args: [lzEndpointAddress, '0x09F098B155D561Fc9F7BcCc97038b7e3d20bAF74'],
 		log: true,
 		waitConfirmations: 1,
 	})

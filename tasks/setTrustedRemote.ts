@@ -31,7 +31,7 @@ export async function setTrustedRemote(taskArgs: OmnichainInteractionTaskArgumen
 			console.log(` tx: ${tx.transactionHash}`)
 
 			const PACKET_TYPE = 1
-			const minDstGas = 400000
+			const minDstGas = 225000
 			tx = await (await localContractInstance.setMinDstGas(remoteChainId, PACKET_TYPE, minDstGas)).wait()
 			console.log(`✅ [${hre.network.name}] setMinDstGas(${remoteChainId}, ${remoteAndLocal})`)
 		} catch (e: any) {

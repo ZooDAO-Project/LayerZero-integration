@@ -33,7 +33,7 @@ export async function getLocalContractInstanceAndRemoteContractAddress(
 	if (taskArgs.contract) {
 		localContractInstance = await (ethers as any).getContract(localContract)
 	} else {
-		localContractInstance = await hre.ethers.getContractAt('IOFTCore', localContract)
+		localContractInstance = await hre.ethers.getContractAt('OFTCore', localContract)
 	}
 
 	// get deployed remote contract address

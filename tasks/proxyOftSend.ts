@@ -19,19 +19,20 @@ export async function proxyOftSend(taskArgs: OmnichainInteractionTaskArguments, 
 	// Approve spending
 	const tokenAddress = await localContractInstance.token()
 	const token = await hre.ethers.getContractAt('ERC20', tokenAddress)
-	await token.approve(localContractInstance.address, qty)
+	let tx = await token.approve(localContractInstance.address, qty)
+	await tx.wait()
 
 	// get remote chain id
 	const targetNetwork = taskArgs.targetNetwork as keyof typeof CHAIN_ID
 	const remoteChainId: any = CHAIN_ID[targetNetwork]
 
 	// quote fee with default adapterParams
-	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 400000]) // default adapterParams example
+	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 300000]) // default adapterParams example
 
 	let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
 	console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
 
-	let tx = await (
+	tx = await (
 		await localContractInstance.sendFrom(
 			owner.address, // 'from' address to send tokens
 			remoteChainId, // remote LayerZero chainId
