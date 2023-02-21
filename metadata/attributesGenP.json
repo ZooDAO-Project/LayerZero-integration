@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"type": "robotic",
+		"family": "behodler",
+		"rarity": "legendary",
+		"name": "Robotic behodler"
+	},
+	{
+		"id": 2,
+		"type": "fire",
+		"family": "behodler",
+		"rarity": "legendary",
+		"name": "Fire behodler"
+	},
+	{
+		"id": 3,
+		"type": "snake",
+		"family": "behodler",
+		"rarity": "legendary",
+		"name": "Snake behodler"
+	},
+	{
+		"id": 4,
+		"type": "zoo",
+		"family": "behodler",
+		"rarity": "legendary",
+		"name": "Zoo behodler"
+	}
+]
