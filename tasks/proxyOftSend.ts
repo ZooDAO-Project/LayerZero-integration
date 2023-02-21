@@ -19,31 +19,31 @@ export async function proxyOftSend(taskArgs: OmnichainInteractionTaskArguments, 
 	// Approve spending
 	const tokenAddress = await localContractInstance.token()
 	const token = await hre.ethers.getContractAt('ERC20', tokenAddress)
-	let tx = await token.approve(localContractInstance.address, qty)
-	await tx.wait()
+	console.log(`Approve spending ${qty} tokens`)
+	// let tx = await token.approve(localContractInstance.address, qty)
+	// await tx.wait()
 
 	// get remote chain id
 	const targetNetwork = taskArgs.targetNetwork as keyof typeof CHAIN_ID
 	const remoteChainId: any = CHAIN_ID[targetNetwork]
 
 	// quote fee with default adapterParams
-	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 300000]) // default adapterParams example
+	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 200000]) // default adapterParams example
 
 	let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
 	console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
 
-	tx = await (
-		await localContractInstance.sendFrom(
-			owner.address, // 'from' address to send tokens
-			remoteChainId, // remote LayerZero chainId
-			toAddress, // 'to' address to send tokens
-			qty, // amount of tokens to send (in wei)
-			owner.address, // refund address (if too much message fee is sent, it gets refunded)
-			ethers.constants.AddressZero, // address(0x0) if not paying in ZRO (LayerZero Token)
-			'0x', // flexible bytes array to indicate messaging adapter services
-			{ value: fees[0] }
-		)
-	).wait()
+	let tx = await localContractInstance.sendFrom(
+		owner.address, // 'from' address to send tokens
+		remoteChainId, // remote LayerZero chainId
+		toAddress, // 'to' address to send tokens
+		qty, // amount of tokens to send (in wei)
+		owner.address, // refund address (if too much message fee is sent, it gets refunded)
+		ethers.constants.AddressZero, // address(0x0) if not paying in ZRO (LayerZero Token)
+		'0x', // flexible bytes array to indicate messaging adapter services
+		{ value: fees[0] }
+	)
+	await tx.wait()
 	console.log(
 		`✅ Message Sent [${hre.network.name}] sendTokens() to OFT @ LZ chainId[${remoteChainId}] token:[${toAddress}]`
 	)
