@@ -13,10 +13,12 @@ import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import '@openzeppelin/hardhat-upgrades'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
-import './tasks/index.js'
+import './tasks/index'
 import { setTrustedRemote } from './tasks/setTrustedRemote'
 import { oftSend } from './tasks/oftSend'
 import { proxyOftSend } from './tasks/proxyOftSend'
+import { hasStoredPayload } from './tasks/hasStoredPayload'
+import { retryPayload } from './tasks/retryPayload'
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -51,6 +53,19 @@ task('proxyOftSend', 'send regular tokens using proxy to another chain', proxyOf
 	.addOptionalParam('localContract', 'Name of local contract if the names are different')
 	.addOptionalParam('remoteContract', 'Name of remote contract if the names are different')
 	.addOptionalParam('contract', 'If both contracts are the same name')
+
+task(
+	'hasStoredPayload',
+	'Checks if there is StoredPayload on lzEndpoint on given network from srcChainId and srcAddress',
+	hasStoredPayload
+)
+	.addParam('srcChain', 'Source chain where was the message sent')
+	.addParam('srcAddress', 'Source UA address where was the message sent')
+
+task('retryPayload', 'Unsticking stuck tx on destination lzEndpoint', retryPayload)
+	.addParam('srcChain', 'Source chain where was the message sent')
+	.addParam('srcAddress', 'Source UA address where was the message sent')
+	.addParam('payload', 'Payload of the stuck tx')
 
 function getMnemonic(networkName: string) {
 	if (networkName) {
