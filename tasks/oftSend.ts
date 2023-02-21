@@ -20,7 +20,7 @@ export async function oftSend(taskArgs: OmnichainInteractionTaskArguments, hre: 
 	const remoteChainId: any = CHAIN_ID[targetNetwork]
 
 	// quote fee with default adapterParams
-	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 400000]) // default adapterParams example
+	let adapterParams = ethers.utils.solidityPack(['uint16', 'uint256'], [1, 200000]) // default adapterParams example
 
 	let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
 	console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
@@ -37,6 +37,7 @@ export async function oftSend(taskArgs: OmnichainInteractionTaskArguments, hre: 
 			{ value: fees[0] }
 		)
 	).wait()
+
 	console.log(
 		`✅ Message Sent [${hre.network.name}] sendTokens() to OFT @ LZ chainId[${remoteChainId}] token:[${toAddress}]`
 	)
