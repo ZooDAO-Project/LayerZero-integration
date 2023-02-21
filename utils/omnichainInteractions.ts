@@ -29,20 +29,32 @@ export async function getLocalContractInstanceAndRemoteContractAddress(
 	}
 
 	// get local contract
-	let localContractInstance: Contract
-	if (taskArgs.contract) {
-		localContractInstance = await (ethers as any).getContract(localContract)
-	} else {
-		localContractInstance = await hre.ethers.getContractAt('OFTCore', localContract)
-	}
+	const localContractInstance = await (hre.ethers as any).getContract(localContract)
+
+	// Logic to get contract by name OR address
+	// let localContractInstance: Contract
+	// if (taskArgs.contract) {
+	// 	localContractInstance = await (hre.ethers as any).getContract(localContract)
+	// } else {
+	// 	localContractInstance = await hre.ethers.getContractAt('OFTCore', localContract)
+	// }
 
 	// get deployed remote contract address
 
-	let remoteAddress: string
-	if (taskArgs.contract) {
-		remoteAddress = getDeploymentAddresses(taskArgs.targetNetwork)[remoteContract]
-	} else {
-		remoteAddress = remoteContract
+	const remoteAddress = getDeploymentAddresses(taskArgs.targetNetwork)[remoteContract]
+
+	// Logic to get contract by name OR address
+	// let remoteAddress: string
+	// if (taskArgs.contract) {
+	// } else {
+	// 	remoteAddress = remoteContract
+	// }
+	console.log(localContractInstance.address, remoteAddress)
+
+	if (!localContractInstance || !remoteAddress) {
+		throw new Error(
+			`Didn't get local contract or remote contract address, local - ${localContractInstance.address}, remote - ${remoteAddress}`
+		)
 	}
 
 	return [localContractInstance, remoteAddress]
