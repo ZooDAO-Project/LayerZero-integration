@@ -18,6 +18,6 @@ export async function retryPayload(taskArgs: any, hre: HardhatRuntimeEnvironment
 	let tx = await lzEndpoint.retryPayload(srcChainId, srcAddress, payload, { gasLimit: 1000000 })
 	await tx.wait()
 	console.log(`[${hre.network.name}] retryPayload() @ LZ srcChainId[${srcChainId}] srcAddress[${srcAddress}]`)
-	// console.log(` tx: ${tx.transactionHash}`)
-	// console.log(`* check your address [${owner.address}] on the destination chain, in the ERC20 transaction tab !"`)
+	console.log(` tx: ${tx.transactionHash}`)
+	console.log(`* check your address on the destination chain, in the ERC20 transaction tab !"`)
 }
