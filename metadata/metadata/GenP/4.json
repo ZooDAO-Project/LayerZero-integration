@@ -1,0 +1,19 @@
+{
+	"name": "Zoo Behodler",
+	"description": "One of ZooDAO's Special Edition Cards.",
+	"image": "https://gateway.pinata.cloud/ipfs/QmXG7wiLfqCMK9h1VY1675rKXJMmdCBCrKecQLuxPbASf4/4.gif",
+	"attributes": [
+		{
+			"trait_type": "rarity",
+			"value": "Legendary"
+		},
+		{
+			"trait_type": "type",
+			"value": "Zoo"
+		},
+		{
+			"trait_type": "family",
+			"value": "Behodler"
+		}
+	]
+}

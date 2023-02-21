@@ -1,0 +1,19 @@
+{
+	"name": "Robotic Behodler",
+	"description": "One of ZooDAO's Special Edition Cards.",
+	"image": "https://gateway.pinata.cloud/ipfs/QmXG7wiLfqCMK9h1VY1675rKXJMmdCBCrKecQLuxPbASf4/1.gif",
+	"attributes": [
+		{
+			"trait_type": "rarity",
+			"value": "Legendary"
+		},
+		{
+			"trait_type": "type",
+			"value": "Robotic"
+		},
+		{
+			"trait_type": "family",
+			"value": "Behodler"
+		}
+	]
+}
