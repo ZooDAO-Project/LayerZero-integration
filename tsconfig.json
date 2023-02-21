@@ -15,6 +15,7 @@
 		"graph/**/*",
 		"scripts/**/*",
 		"tasks/**/*",
+		"deploy/**/*",
 		"classes/**/*",
 		"test/**/*",
 		"typechain/**/*",
