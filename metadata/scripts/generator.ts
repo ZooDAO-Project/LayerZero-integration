@@ -1,5 +1,5 @@
 import { log } from 'console'
-import attributes from '../attributes.json'
+import attributes from '../attributesGenP.json'
 import * as fs from 'fs'
 
 interface Metadata {
@@ -28,12 +28,17 @@ for (const item of attributes) {
 
 	const metadata = {
 		name: words.join(' '),
-		description: "One of ZooDAO's Limited Edition Genesis Cards",
-		image: 'https://gateway.pinata.cloud/ipfs/QmTcsJujMBvRQL3gR6TeT4CBfUFayQScLYSKdViyCki7vR/' + item.id + '.gif',
-		attributes: [getAttribute('rarity', item.rarity), getAttribute('type', item.type)],
+		// name: item.name,
+		description: "One of ZooDAO's Special Edition Cards.",
+		image: 'https://gateway.pinata.cloud/ipfs/QmXG7wiLfqCMK9h1VY1675rKXJMmdCBCrKecQLuxPbASf4/' + item.id + '.gif',
+		attributes: [
+			getAttribute('rarity', item.rarity),
+			getAttribute('type', item.type),
+			getAttribute('family', item.family),
+		],
 	}
 
-	fs.writeFile('./metadata/metadata/' + item.id.toString() + '.json', JSON.stringify(metadata), (err) => {
+	fs.writeFile('./metadata/metadata/GenP/' + item.id.toString() + '.json', JSON.stringify(metadata), (err) => {
 		if (err) {
 			console.error(err)
 		}

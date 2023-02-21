@@ -58,8 +58,8 @@ const onFileContent = (filename: string, content: any) => {
 	log(JSON.stringify(card))
 }
 
-const cards = readFiles('./metadata/assets/', onFileContent, onErr)
-fs.writeFile('./metadata/attributes.json', JSON.stringify(cards), (err) => {
+const cards = readFiles('./metadata/assets/GenP/', onFileContent, onErr)
+fs.writeFile('./metadata/attributesGenP.json', JSON.stringify(cards), (err) => {
 	if (err) {
 		console.error(err)
 	}

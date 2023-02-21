@@ -7,15 +7,17 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 
 	const lzEndpointAddress = LZ_ENDPOINTS[hre.network.name]
 	const minGasToStore = 300000
-
+	const args = [minGasToStore, lzEndpointAddress]
 	console.log(`[${hre.network.name}] Endpoint Address: ${lzEndpointAddress}`)
 
 	const result = await deploy('ZooDAOGen0', {
 		from: deployer,
-		args: [minGasToStore, lzEndpointAddress],
+		args,
 		log: true,
 		waitConfirmations: 1,
 	})
+
+	await verifyContract(result.address, args)
 
 	// console.log(result)
 
